@@ -119,7 +119,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--destaque-1-2);
-    width: 350px;
+    width: 400px;
     height: 1px;
     z-index: 2;
 }
@@ -136,6 +136,10 @@ p {
     margin: 20px 100px;
     color: var(--texto-principal-2);
     font-size: 20px;
+}
+
+.menor {
+    font-size: 14px;
 }
 
 .back {

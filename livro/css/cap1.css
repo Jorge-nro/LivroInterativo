@@ -24,7 +24,7 @@
     --pure-light: white;
 }
 
-hmtl, body {
+html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -73,7 +73,7 @@ body {
 
 /*De texto*/
 
-.primeiroBloco {
+.primeiroBloco, .segundoBloco, .terceiroBloco {
     color: var(--texto-principal);
     border: 2px solid var(--fundo-secundario);
     margin: 10px;
@@ -83,41 +83,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.primeiroBloco:hover {
-    background-color: var(--fundo-secundario);
-    color: var(--acento-2-neon);
-}
-
-/*De texto*/
-
-.segundoBloco {
-    color: var(--texto-principal);
-    border: 2px solid var(--fundo-secundario);
-    margin: 10px;
-    padding: 10px 10px 0 10px;
-    border-radius: 1%;
-    background-color: var(--fundo-principal);
-    transition: background-color 0.3s ease;
-}
-
-.segundoBloco:hover {
-    background-color: var(--fundo-secundario);
-    color: var(--acento-2-neon);
-}
-
-/*De texto*/
-
-.terceiroBloco {
-    color: var(--texto-principal);
-    border: 2px solid var(--fundo-secundario);
-    margin: 10px;
-    padding: 10px 10px 0 10px;
-    border-radius: 1%;
-    background-color: var(--fundo-principal);
-    transition: background-color 0.3s ease;
-}
-
-.terceiroBloco:hover {
+.primeiroBloco:hover, .segundoBloco:hover, .terceiroBloco:hover {
     background-color: var(--fundo-secundario);
     color: var(--acento-2-neon);
 }
@@ -280,6 +246,7 @@ img {
     height: 400px;
     float: right;
     border: 1.5px solid var(--erros-alertas);
+    border-radius: 5px;
     margin: 30px 30px 30px 30px;
     padding: 1px;
     animation: pulsar3 0.001s infinite alternate;
@@ -340,14 +307,19 @@ img {
         display: block;
         margin: 20px auto;
         height: auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .botaoFinalEstilo {
-        width: 90%;
-        font-size: 40px;
+        width: 100%;
+        font-size: 36px;
         background-size: cover;
-        background-position: 0em -5em;
+        background-position: center;
+    }
+
+    .igreja {
+        height: auto;
+        max-width: 100%;
     }
 }
 
@@ -355,6 +327,7 @@ img {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+        padding: 0 10px;
     }
 
     .titulo1 {
@@ -369,24 +342,24 @@ img {
     .quartoBloco,
     .quintoBloco {
         padding: 10px;
-        margin: 5px;
+        margin: 10px 0;
         font-size: 16px;
     }
 
     .botaoFinalEstilo {
-        width: 90%;
-        height: 80px;
-        font-size: 30px;
-        background-position: 0em -3.5em;
+        width: 100%;
+        height: 70px;
+        font-size: 28px;
+        background-position: center;
     }
 
     .igreja {
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
     .listaDialogo {
-        padding-left: 10px;
+        margin-left: 25px;
     }
 
     .dialogo {

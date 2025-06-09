@@ -52,7 +52,14 @@ div {
   margin: 5px;
 }
 
-.um, .dois, .tres, .quatro, .cinco, .seis { position: relative; border: 0px solid var(--acento-1-neon); background-color: var(--fundo-secundario); box-shadow: 2px 2px 2px var(--fundo-principal); transition: 0.1s; text-shadow: 3px 3px 2px var(--fundo-principal); }
+.um, .dois, .tres, .quatro, .cinco, .seis { 
+  position: relative; 
+  border: 0px solid var(--acento-1-neon); 
+  background-color: var(--fundo-secundario); 
+  box-shadow: 2px 2px 2px var(--fundo-principal); 
+  transition: 0.1s; 
+  text-shadow: 3px 3px 2px var(--fundo-principal); 
+}
 
 .um:hover, .dois:hover, .tres:hover, .quatro:hover, .cinco:hover, .seis:hover {
   border: 1px solid var(--acento-1-neon);   
@@ -75,7 +82,6 @@ div {
     box-shadow: 0 0 10px var(--acento-1-neon);
     z-index: 2;
 }
-
 
 .botaoCyb {
   position: relative;
@@ -129,7 +135,6 @@ div {
   animation: glitchFlicker 0.3s alternate infinite;
 }
 
-
 @keyframes glitchFlicker {
   0%   { 
     opacity: 0; transform: translate(-50%, -50%) translateY(0);
@@ -139,7 +144,7 @@ div {
                  0 -5px 0.5px var(--fundo-principal),
                  0 -5px 0.5px var(--fundo-principal),
                  0 -5px 0.5px var(--fundo-principal);
-}
+  }
   10%   { 
     opacity: 0; transform: translate(-50%, -50%) translateY(0);
     text-shadow: 0 5px 0.5px var(--acento-2-neon),
@@ -148,7 +153,7 @@ div {
                  -5px 0 0.5px var(--fundo-principal),
                  -5px 0 0.5px var(--fundo-principal),
                  -5px 0 0.5px var(--fundo-principal);
-}
+  }
   20%  { 
     opacity: 1; transform: translate(-50%, -50%) translateY(-1px);
     text-shadow: 2px 0 0.5px greenyellow,
@@ -157,7 +162,7 @@ div {
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal);
-}
+  }
   30%  { 
     opacity: 0; transform: translate(-50%, -50%) translateY(-1px);
     text-shadow: 2px 0 0.5px greenyellow,
@@ -166,7 +171,7 @@ div {
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal);
-}
+  }
   40%  { 
     opacity: 0; transform: translate(-50%, -50%) translateY(1px);
     text-shadow: 0 2px 0.5px var(--erros-alertas),
@@ -175,7 +180,7 @@ div {
                  4 -2px 0.5px var(--fundo-principal),
                  4 -2px 0.5px var(--fundo-principal),
                  4 -2px 0.5px var(--fundo-principal); 
-}
+  }
   50%  { 
     opacity: 1; transform: translate(-50%, -50%) translateY(1px);
     text-shadow: 0 2px 0.5px var(--erros-alertas),
@@ -184,7 +189,7 @@ div {
                  4 -2px 0.5px var(--fundo-principal),
                  4 -2px 0.5px var(--fundo-principal),
                  4 -2px 0.5px var(--fundo-principal); 
-}
+  }
   60%  { 
     opacity: 1; transform: translate(-50%, -50%) translateY(0);
     text-shadow: 5px 0 0.5px var(--acento-1-neon),
@@ -193,24 +198,62 @@ div {
                  -5px 4 0.5px var(--fundo-principal),
                  -5px 4 0.5px var(--fundo-principal),
                  -5px 4 0.5px var(--fundo-principal);
-}
+  }
   80%  { 
     opacity: 0; transform: translate(-50%, -50%) translateY(2px); 
-        text-shadow: 2px 0 0.5px greenyellow,
-                     2px 0 0.5px greenyellow,
-                     2px 0 0.5px greenyellow,
+    text-shadow: 2px 0 0.5px greenyellow,
+                 2px 0 0.5px greenyellow,
+                 2px 0 0.5px greenyellow,
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal),
                  -2px 4 0.5px var(--fundo-principal);
-}
+  }
   100% { 
     opacity: 1; transform: translate(-50%, -50%) translateY(0); 
-        text-shadow: 0 5px 0.5px var(--acento-2-neon),
-                     0 5px 0.5px var(--acento-2-neon),
-                     0 5px 0.5px var(--acento-2-neon),
-                     4 -5px 0.5px var(--fundo-principal),
-                     4 -5px 0.5px var(--fundo-principal),
-                     4 -5px 0.5px var(--fundo-principal);
-}
+    text-shadow: 0 5px 0.5px var(--acento-2-neon),
+                 0 5px 0.5px var(--acento-2-neon),
+                 0 5px 0.5px var(--acento-2-neon),
+                 4 -5px 0.5px var(--fundo-principal),
+                 4 -5px 0.5px var(--fundo-principal),
+                 4 -5px 0.5px var(--fundo-principal);
+  }
 }
 
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  div {
+    width: 150px;
+    height: 60px;
+  }
+  
+  .botaoCyb {
+    min-width: 200px;
+    height: 60px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  
+  .textoNormal,
+  .botaoCybGli {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    width: 120px;
+    height: 50px;
+  }
+  
+  .botaoCyb {
+    min-width: 150px;
+    height: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .textoNormal,
+  .botaoCybGli {
+    font-size: 14px;
+  }
+}
