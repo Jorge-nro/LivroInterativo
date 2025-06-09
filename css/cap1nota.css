@@ -29,14 +29,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
     gap: 10px;
     padding: 10px;
     background-color: var(--fundo-principal);
     color: var(--pc-fonte-color);
     font-family: "VT323", monospace;
-    height: 100dvh;
+    min-height: 100dvh;
     border: 2px solid var(--fundo-secundario);
+    overflow-x: hidden;
 }
 
 .pc {
@@ -44,6 +46,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    max-width: 100%;
 }
 
 .cam {
@@ -125,26 +128,26 @@ h2 {
     height: 20px;
 }
 
-    .bateria {
+.bateria {
     margin: -998px 0 0 205px;
     color: transparent;
     width: 13px;
     position: absolute;
-    }
+}
 
-    .bluethoot {
+.bluethoot {
     margin: -998px 0 0 160px;
     color: transparent;
     width: 11px;
     position: absolute;
-    }
+}
 
-    .cameraOff {
+.cameraOff {
     margin: -998px 0 0 145px;
     color: transparent;
     width: 11px;
     position: absolute;
-    }
+}
 
 .display {
     position: absolute;
@@ -191,132 +194,65 @@ h2 {
 @media (max-width: 1224px) {
 
     .Marca {
-    position: absolute;
-    margin: auto;
-    margin-top: 8px;
-    margin-left: 30%;
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--fundo-secundario);
-    text-shadow: 0 0 2px var(--fundo-principal);
-    z-index: 1;
-}
-
-    .base {
-        width: 0;
+        margin-top: 8px;
+        margin-left: 30%;
+        color: var(--fundo-secundario);
+        text-shadow: 0 0 2px var(--fundo-principal);
     }
 
-    .stand {
-        width: 0px;
+    .base, .stand {
+        display: none;
     }
 
     .screen, .screenLight {
         width: 30rem;
-        
-    }
-
-    .pc {
-        margin-top: 30px;
+        height: 38rem;
     }
 
     .screen {
         border: 35px solid var(--fundo-secundario);
         border-bottom: 55px solid var(--fundo-secundario);
-        border-radius: 12px;
     }
 
     .screenLight {
-        border: 0;
         box-shadow: none;
     }
 
     .botao {
-    color: var(--fundo-principal);
-    background-color: var(--fundo-secundario);
-    border: 10px solid var(--fundo-secundario);
-    box-shadow: 0px 0px 4px var(--fundo-principal);
-    border-radius: 40%;
-    position: absolute;
+        position: absolute;
     }
 
     .sinal {
-
-    margin: -450px 0 0 18px;
+        margin: -450px 0 0 18px;
     }
 
     .audio {
-    position: absolute;
-    margin: -450px 0 0 45px;
-    }
-
-        .bateria {
-    margin: -998px 0 0 205px;
-    color: transparent;
-    width: 13px;
-    position: absolute;
-    }
-
-    .bluethoot {
-    margin: -998px 0 0 160px;
-    color: transparent;
-    width: 11px;
-    position: absolute;
-    }
-
-    .cameraOff {
-    margin: -998px 0 0 145px;
-    color: transparent;
-    width: 11px;
-    position: absolute;
+        margin: -450px 0 0 45px;
     }
 
     h2 {
-    margin-top: 60px;
-    margin-bottom: 10px;
-    color: var(--pure-light);
-    text-shadow: 0 0 1.5px var(--pc-fonte-color);
-    }
-
-    .texto {
-    margin: 20px 20px;
-    }
-
-    .rodape {
-    margin-top: 10px;
-    margin-left: 60px;
+        margin-top: 60px;
     }
 
     .display {
-    position: absolute;
-    top: -45%;
-    left: -80%;
-    transform: translate(-50%, -50%);
-    height: 85px;
-    width: 345px;
-    text-align: center;
+        top: -53%;
+        left: -80%;
     }
 
     .display #time {
-    line-height: 85px;
-    color: var(--pc-fonte-color);
-    font-size: 15px;
-    margin: 339px 0 0 780px;
+        margin: 339px 0 0 780px;
     }
 
     .cam {
-        color: transparent;
-        
         background: #1e3a5f;
         border: 5px solid var(--fundo-principal);
         border-right: 0.05px solid var(--pure-light);
         border-radius: 50%;
-        height:5px;
+        height: 5px;
         width: 7px;
         margin: 10px;
         position: absolute;
         z-index: 3;
-        
     }
 }
 
@@ -325,148 +261,67 @@ h2 {
 @media (max-width: 588px) {
 
     .Marca {
-    position: absolute;
-    margin: auto;
-    margin-top: 165%;
-    margin-left: 50%;
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--fundo-secundario);
-    text-shadow: 0 0 2px var(--fundo-principal);
-    z-index: 1;
+        margin-top: 165%;
+        margin-left: 50%;
+        color: var(--fundo-secundario);
+        text-shadow: 0 0 2px var(--fundo-principal);
     }
 
-
-    .base {
-        display: none;
-    }
-
-    .stand {
+    .base, .stand {
         display: none;
     }
 
     .screen, .screenLight {
         width: 15rem;
         height: 25rem;
-        
-    }
-
-    .pc {
-        margin-top: 30px;
     }
 
     .screen {
         border: 10px solid var(--fundo-secundario);
         border-bottom: 55px solid var(--fundo-secundario);
-        border-radius: 12px;
         overflow-y: auto;
     }
 
     .screenLight {
-        border: 0;
         box-shadow: none;
         position: relative;
-        scrollbar-width: none;
     }
-
 
     .botao {
-        position: sticky;
-    color: var(--fundo-principal);
-    background-color: var(--fundo-secundario);
-    border: 10px solid var(--fundo-secundario);
-    box-shadow: 0px 0px 4px var(--fundo-principal);
-    border-radius: 40%;
-    position: absolute;
-    margin-bottom: 0.1rem;
+        margin-bottom: 0.1rem;
     }
 
-    .sinal {
-                position: sticky;
-        margin: -905px 0 0 200px;
+    .sinal, .audio, .bateria, .bluethoot, .cameraOff {
         width: 13px;
         position: absolute;
         color: var(--pure-light);
     }
 
-    .audio {
-                position: sticky;
-        margin: -905px 0 0 185px;
-        width: 15px;
-        position: absolute;
-            color: var(--pure-light);
-    }
-
-    .bateria {
-                position: sticky;
-    margin: -905px 0 0 215px;
-    width: 13px;
-    position: absolute;
-    color: var(--pure-light);
-    }
-
-    .bluethoot {
-                position: sticky;
-    margin: -903px 0 0 170px;
-    width: 11px;
-    position: absolute;
-    color: var(--pure-light);
-    }
-
-    .cameraOff {
-                position: sticky;
-    margin: -903px 0 0 155px;
-    width: 11px;
-    position: absolute;
-    color: var(--pure-light);
-    }
-
-    h2 {
-    margin-top: 60px;
-    margin-bottom: 10px;
-    color: var(--pure-light);
-    text-shadow: 0 0 1.5px var(--pc-fonte-color);
-    }
-
-    .texto {
-    margin: 20px 20px;
-    }
-
-    .rodape {
-    margin-top: 10px;
-    margin-left: 60px;
-    }
+    .sinal { margin: -905px 0 0 200px; }
+    .audio { margin: -905px 0 0 185px; width: 15px; }
+    .bateria { margin: -905px 0 0 215px; }
+    .bluethoot { margin: -903px 0 0 170px; width: 11px; }
+    .cameraOff { margin: -903px 0 0 155px; width: 11px; }
 
     .display {
-    position: absolute;
-    top: -35%;
-    left: -70%;
-    transform: translate(-50%, -50%);
-    height: 85px;
-    width: 345px;
-    text-align: center;
+        top: -35%;
+        left: -70%;
     }
 
     .display #time {
-    line-height: 85px;
-    color: var(--pc-fonte-color);
-    font-size: 15px;
-    margin: 95px 0 0 350px;
-    color: var(--pure-light);
+        margin: 95px 0 0 350px;
+        color: var(--pure-light);
     }
 
     .cam {
-        color: transparent;
         background: #1e3a5f;
         border: 5px solid var(--fundo-principal);
         border-right: 0.05px solid var(--pure-light);
         border-radius: 50%;
-        height:5px;
+        height: 5px;
         width: 7px;
         margin: 15px;
         position: absolute;
         z-index: 3;
-        
     }
 }
